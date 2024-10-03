@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Artistry Connect - Guest</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="AC logo.png" alt="Logo" class="logo">
+                <a href="guest.html" class="web-name">Artistry Connect</a>
+                <a href="guest.html" class="home-link">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Category</button>
+                    <div class="dropdown-content">
+                        <a href="category.html?category=Painting">Painting</a>
+                        <a href="category.html?category=Sculpture">Sculpture</a>
+                        <a href="category.html?category=Architecture">Architecture</a>
+                        <a href="category.html?category=Literature">Literature</a>
+                        <a href="category.html?category=Theater">Theater</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <input type="text" class="search" placeholder="Search...">
+                <a href="#login.html" class="btn" onclick="showLogin()">Login</a>
+                <a href="#signup.html" class="btn" onclick="showSignup()">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="welcome-text">Welcome to Artistry Connect!</h1>
+        <p class="welcome-subtext">The place where ideas come to life! <br>
+            Artistry Connect connects you with talented artists that specialize in a variety of creative arts and crafts, <br>
+            whether you're seeking for a one-of-a-kind handmade item, want to commission custom artwork.</p>
+
+        
+        <div class="slideshow-container">
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a> 
+            <div class="slides" id="slides">
+                <div class="slide-box" onclick="showSignup()">
+                    <div class="inner-box">
+                        <img src="image1.jpg" alt="Artwork 1">
+                    </div>
+                    <div class="slide-text">Artwork 1</div>
+                </div>
+                <div class="slide-box" onclick="showSignup()">
+                    <div class="inner-box">
+                        <img src="image2.jpg" alt="Artwork 2"> 
+                    </div>
+                    <div class="slide-text">Artwork 2</div>
+                </div>
+                <div class="slide-box" onclick="showSignup()">
+                    <div class="inner-box">
+                        <img src="image3.jpg" alt="Artwork 3"> 
+                    </div>
+                    <div class="slide-text">Artwork 3</div>
+                </div>
+                <div class="slide-box" onclick="showSignup()">
+                    <div class="inner-box">
+                        <img src="image4.jpg" alt="Artwork 4"> 
+                    </div>
+                    <div class="slide-text">Artwork 4</div>
+                </div>
+                <div class="slide-box" onclick="showSignup()">
+                    <div class="inner-box">
+                        <img src="image5.jpg" alt="Artwork 5"> 
+                    </div>
+                    <div class="slide-text">Artwork 5</div>
+                </div>
+                <div class="slide-box" onclick="showSignup()">
+                    <div class="inner-box">
+                        <img src="image6.jpg" alt="Artwork 6"> 
+                    </div>
+                    <div class="slide-text">Artwork 6</div>
+                </div>
+            </div>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Forgot Password</title>
+</head>
+<body>
+    <div class="form-container">
+        <!--Logo-->
+        <div class="logo-box">
+            <img src="AC logo.png" alt="Artistry Connect Logo">
+        </div>
+        
+        <!--Forgot Password Form-->
+        <div class="form-box">
+            <h1>Forgot Password</h1>
+            <form id="forgotPasswordForm" onsubmit="return sendResetLink(event)">
+                <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                <p id="forgot-error-msg" style="color:red;"></p>
+                <button type="submit">Reset Password</button>
+                <p>Back to <a href="login.html">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function sendResetLink(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('forgotEmail').value;
+            const storedEmail = localStorage.getItem('userEmail');
+            const errorMsg = document.getElementById('forgot-error-msg');
+
+            // Check if email exists in localStorage
+            if (email === storedEmail) {
+                alert('A reset link has been sent to your email!');
+                window.location.href = 'reset.html'; // Redirect to Reset Password page
+            } else {
+                errorMsg.textContent = "This email is not registered!";
+            }
+        }
+    </script>
+</body>
+</html>

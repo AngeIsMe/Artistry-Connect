@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="form-container">
+        <!--Logo-->
+        <div class="logo-box">
+            <img src="AC logo.png" alt="Artistry Connect Logo">
+        </div>
+        
+        <!--Login Form-->
+        <div class="form-box">
+            <h1>Log In</h1>
+            <form id="loginForm" onsubmit="return validateLogin(event)">
+
+                <input type="text" id="username" placeholder="Username" required>
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <span class="eye-icon" onclick="togglePassword('loginPassword')">
+                        <i class="fas fa-eye-slash"></i>
+                    </span>
+                </div>
+
+                <p id="login-error-msg" style="color:red;"></p>
+                <button type="submit">Log In</button>
+                <a href="forgot.html">Forgot Password?</a><br>
+                <p>Don't have an account? <a href="signup.html"> Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

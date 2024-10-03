@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Artistry Connect - Client</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="client.html" class="logo">Artistry Connect</a>
+                <a href="client.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Category</button>
+                    <div class="dropdown-content">
+                        <a href="category.html?category=Painting">Painting</a>
+                        <a href="category.html?category=Sculpture">Sculpture</a>
+                        <a href="category.html?category=Architecture">Architecture</a>
+                        <a href="category.html?category=Literature">Literature</a>
+                        <a href="category.html?category=Theater">Theater</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <input type="text" class="search" placeholder="Search...">
+                <a href="login.html" class="btn">Login</a>
+                <a href="signup.html" class="btn">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to Client Dashboard</h1>
+        <div class="slideshow-container"></div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        loadSlides('client');
+    </script>
+</body>
+</html>
